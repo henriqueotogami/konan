@@ -2,7 +2,7 @@
 
 # Estudos de Spring Boot
 
-<img width="auto" src="https://github.com/HenriqueMAP/konan/blob/main/Konan.png?raw=true">
+<img width="auto" src="https://github.com/HenriqueMAP/konan/blob/main/konan.png?raw=true">
 
 <br>
 <br>
