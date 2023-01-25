@@ -1,4 +1,4 @@
-package br.com.otogamidev.konan.model;
+package br.com.otogamidev.konan.model.entities;
 
 public class Client {
 
