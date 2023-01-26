@@ -4,7 +4,6 @@ import br.com.otogamidev.konan.model.entities.Product;
 import br.com.otogamidev.konan.model.repositories.DataAccessProduct;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -13,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.awt.print.Pageable;
 import java.util.ArrayList;
 import java.util.Optional;
 
@@ -33,7 +31,7 @@ public class ProductManager {
     }
 
     @GetMapping
-    public Iterable<Product> getAllProduct() { return dataAccessProduct.findAll(); }
+    public Iterable<Product> getAllProducts() { return dataAccessProduct.findAll(); }
 
     @GetMapping(path="/{id}")
     public Optional<Product> getProductById(@PathVariable final int id) { return dataAccessProduct.findById(id); }
@@ -46,11 +44,16 @@ public class ProductManager {
 
     @DeleteMapping(path="/{id}")
     public void deleteProduct(@PathVariable final int id) { dataAccessProduct.deleteById(id); }
-    
+
     @GetMapping(path = "/page/{pageNumber}")
     public Iterable<Product> getProductsByPage(@PathVariable final int pageNumber) {
 //        final Pageable page = PageRequest.of(0,3);
         Iterable<Integer> iterable = new ArrayList<>(3);
         return dataAccessProduct.findAllById(iterable);
+    }
+
+    @GetMapping(path = "/name/{contains}")
+    public Iterable<Product> getAllProductsByName(@PathVariable final String contains) {
+        return dataAccessProduct.findByNameContainsIgnoreCase(contains);
     }
 }
