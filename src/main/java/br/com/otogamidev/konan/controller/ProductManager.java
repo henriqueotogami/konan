@@ -5,10 +5,13 @@ import br.com.otogamidev.konan.model.repositories.DataAccessProduct;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/products")
@@ -27,4 +30,7 @@ public class ProductManager {
 
     @GetMapping
     public Iterable<Product> getAllProduct() { return dataAccessProduct.findAll(); }
+
+    @GetMapping(path="/{id}")
+    public Optional<Product> getProductById(@PathVariable final int id) { return dataAccessProduct.findById(id); }
 }
