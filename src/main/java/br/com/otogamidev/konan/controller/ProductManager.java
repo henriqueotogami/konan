@@ -4,7 +4,13 @@ import br.com.otogamidev.konan.model.entities.Product;
 import br.com.otogamidev.konan.model.repositories.DataAccessProduct;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Optional;
 
@@ -34,4 +40,7 @@ public class ProductManager {
 //        dataAccessProduct.save(product);
 //        return product;
 //    }
+
+    @DeleteMapping(path="/{id}")
+    public void deleteProduct(@PathVariable final int id) { dataAccessProduct.deleteById(id); }
 }
