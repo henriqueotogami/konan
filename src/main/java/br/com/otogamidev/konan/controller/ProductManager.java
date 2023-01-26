@@ -17,11 +17,8 @@ public class ProductManager {
     private DataAccessProduct dataAccessProduct;
 
     @PostMapping
-    public @ResponseBody Product createNewProduct(@RequestParam final String name,
-                                                  @RequestParam final double price,
-                                                  @RequestParam final double discount) {
+    public @ResponseBody Product createNewProduct(final Product newProduct) {
         System.out.println("ProductManager - createNewProduct(): BEGIN");
-        final Product newProduct = new Product(name,price,discount);
         dataAccessProduct.save(newProduct);
         System.out.println("ProductManager - createNewProduct(): END");
         return newProduct;
