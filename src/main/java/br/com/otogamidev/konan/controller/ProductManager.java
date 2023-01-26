@@ -4,6 +4,7 @@ import br.com.otogamidev.konan.model.entities.Product;
 import br.com.otogamidev.konan.model.repositories.DataAccessProduct;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -23,4 +24,7 @@ public class ProductManager {
         System.out.println("ProductManager - createNewProduct(): END");
         return newProduct;
     }
+
+    @GetMapping
+    public Iterable<Product> getAllProduct() { return dataAccessProduct.findAll(); }
 }
