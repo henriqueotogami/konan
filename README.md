@@ -2,18 +2,18 @@
 
 # Estudos de Spring Boot
 
-<img width="auto" src="https://github.com/HenriqueMAP/konan/blob/main/konan.png?raw=true">
+<img width="auto" src="https://github.com/henriqueotogami/konan/blob/main/konan.png?raw=true">
 
 <br>
 <br>
 <div align="center">
-<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/henriquemap/konan">
+<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/henriqueotogami/konan">
 </div>
 <br>
-<img src="https://img.shields.io/github/issues/henriquemap/konan">
-<img src="https://img.shields.io/github/forks/henriquemap/konan">
-<img src="https://img.shields.io/github/stars/henriquemap/konan">
-<img src="https://img.shields.io/github/license/henriquemap/konan">
+<img src="https://img.shields.io/github/issues/henriqueotogami/konan">
+<img src="https://img.shields.io/github/forks/henriqueotogami/konan">
+<img src="https://img.shields.io/github/stars/henriqueotogami/konan">
+<img src="https://img.shields.io/github/license/henriqueotogami/konan">
 </div>
 <br>
 <div align=center>
@@ -51,7 +51,7 @@ Curso: [Cod3r | Java 2022 Completo](https://www.udemy.com/course/fundamentos-de-
 
 > ### Caso você queira ajudar a melhorar este repositório, qualquer ajuda é bem vinda.
 
-- [x] Faça um **fork** deste repositório (https://github.com/HenriqueMAP/konan/fork);
+- [x] Faça um **fork** deste repositório (https://github.com/henriqueotogami/konan/fork);
 - [x] Crie um **branch** para adicionar as suas modificações ` git checkout -b meu-novo-recurso `;
 - [x] Faça um **commit** ` git commit -am 'feature: Adicionando um novo recurso ...'`;
 - [x] Faça um **push** ` git push origin meu-novo-recurso ` ;
